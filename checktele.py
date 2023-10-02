@@ -346,19 +346,19 @@ async def _(event):
 𝚞𝚜𝚎𝚛 (@{username})
 𝚋𝚢 ↣ @oj5555
   ''')
-            except telethon.errors.rpcerrorlist.UsernameInvalidError:
-                await event.client.send_message(event.chat_id, f"مبند `{username}` ❌❌")
-            except Exception as eee:
-                await sython.send_message(event.chat_id, f'''خطأ مع {username}
-    الخطأ :
-    {str(eee)}''')
-Threads=[] 
-for t in range(200):
-    x = threading.Thread(target=_)
-    le = threading.Thread(target=gen_user)
-    x.start()
-    le.start()
-    Threads.append(x)
-    Threads.append(le)
-for Th in Threads:
-    Th.join()
+            break
+                    except telethon.errors.rpcerrorlist.UsernameInvalidError:
+                        await event.client.send_message(event.chat_id, f"band the @{username} ")
+                    except Exception as eee:
+                    	await turbo.send_message(event.chat_id, f'''{username}
+- {str(eee)} -''')
+                    if "A wait of" in str(eee):
+                        break
+                else: 
+                    pass
+                trys += 1
+
+            trys = ""
+            isauto.clear()
+            isauto.append("off")
+            await turbo.send_message(event.chat_id, "done ⤷ 1")
